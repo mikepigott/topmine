@@ -60,7 +60,7 @@ def store_most_frequent_topics(most_frequent_topics, prefix_path="output/topic")
         file_name = str.format("{0}{1}.txt", prefix_path, topic_index)
         f = open(file_name, 'w')
         for phrase, val in topic:
-            f.write(str.format("{0} {1}\n",phrase, val))
+            f.write(str.format("\"{0}\",{1}\n",phrase, val))
         f.close()
 
 def _get_string_phrase(phrase, index_vocab):
