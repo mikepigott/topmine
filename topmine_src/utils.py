@@ -42,8 +42,8 @@ def load_vocab(path="intermediate_output/vocab.txt"):
 
 def store_frequent_phrases(frequent_phrases, path='output/frequent_phrases.txt'):
     f = open(path, 'w')
-    for phrase, val in enumerate(frequent_phrases):
-        f.write(str.format("{0} {1}\n",phrase, val))
+    for phrase, val in frequent_phrases:
+        f.write(str.format("\"{0}\",{1}\n",phrase, val))
     f.close()
 
 def store_phrase_topics(document_phrase_topics, path="intermediate_output/phrase_topics.txt"):
